@@ -1,0 +1,14 @@
+﻿;RF Calibration ,GoldMachine, and Non-signalling Test aConfig File
+
+[CAT1_CALC_PLAN]
+;GoldMachine 制作开关 0: OFF; 1: ON
+gmachine_make_switch = 0
+
+;0: OFF; 1: ON
+gmachine_loss_check_switch = 1
+
+[CAT1_GOLDMACHINE_INFO]
+gmine_fixed_power = 23
+gmine_instr_expect_power = 28
+gmine_test_power_limit =20,26
+gmine_calc_loss_limit = 0,8

@@ -1,0 +1,272 @@
+[2024-07-10 17:22:09,550] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:22:09,551] [DEBUG] 等待读取数据...
+[2024-07-10 17:22:09,625] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:22:09,627] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:22:09,627] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:22:10,277] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:22:10,278] [DEBUG] [2024-07-10 17:22:10.278639] 停止读取数据
+[2024-07-10 17:22:10,278] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 117, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 221, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:22:10,719] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:22:10,720] [DEBUG] 等待读取数据...
+[2024-07-10 17:22:10,801] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:22:10,802] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:22:10,802] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:22:11,279] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:22:11,279] [DEBUG] [2024-07-10 17:22:11.279502] 停止读取数据
+[2024-07-10 17:22:11,279] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:22:11,688] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:22:11,688] [DEBUG] 等待读取数据...
+[2024-07-10 17:22:11,762] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:22:11,762] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:22:11,762] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:22:12,073] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:22:12,074] [DEBUG] [2024-07-10 17:22:12.074666] 停止读取数据
+[2024-07-10 17:22:12,074] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:22:12,561] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:22:12,570] [DEBUG] 等待读取数据...
+[2024-07-10 17:22:12,636] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:22:12,636] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:22:12,636] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:22:12,875] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:22:12,875] [DEBUG] [2024-07-10 17:22:12.875002] 停止读取数据
+[2024-07-10 17:22:12,875] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com3.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com3.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:00,615] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:00,616] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:00,694] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:00,694] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:00,695] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:01,139] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:01,139] [DEBUG] [2024-07-10 17:41:01.139521] 停止读取数据
+[2024-07-10 17:41:01,139] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 117, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 221, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:01,703] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:01,703] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:01,786] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:01,786] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:01,788] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:02,090] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:02,091] [DEBUG] [2024-07-10 17:41:02.091737] 停止读取数据
+[2024-07-10 17:41:02,091] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 117, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 221, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:02,439] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:02,439] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:02,524] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:02,524] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:02,525] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:02,870] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:02,870] [DEBUG] [2024-07-10 17:41:02.870877] 停止读取数据
+[2024-07-10 17:41:02,870] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 117, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 221, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:03,321] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:03,321] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:03,403] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:03,403] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:03,405] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:03,799] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:03,799] [DEBUG] [2024-07-10 17:41:03.799488] 停止读取数据
+[2024-07-10 17:41:03,799] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:04,256] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:04,256] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:04,328] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:04,328] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:04,329] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:04,557] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:04,557] [DEBUG] [2024-07-10 17:41:04.557346] 停止读取数据
+[2024-07-10 17:41:04,557] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:04,869] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:04,869] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:04,942] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:04,942] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:04,943] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:05,144] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:05,144] [DEBUG] [2024-07-10 17:41:05.144679] 停止读取数据
+[2024-07-10 17:41:05,144] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com2.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:05,568] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:05,568] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:05,642] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:05,642] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:05,642] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:05,846] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:05,846] [DEBUG] [2024-07-10 17:41:05.846815] 停止读取数据
+[2024-07-10 17:41:05,846] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com3.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com3.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:06,149] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:06,149] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:06,225] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:06,225] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:06,226] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:06,399] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:06,400] [DEBUG] [2024-07-10 17:41:06.400733] 停止读取数据
+[2024-07-10 17:41:06,400] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com3.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com3.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:06,762] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:06,762] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:06,841] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:06,841] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:06,841] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:07,053] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:07,055] [DEBUG] [2024-07-10 17:41:07.055009] 停止读取数据
+[2024-07-10 17:41:07,055] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com4.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com4.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:07,385] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:07,385] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:07,456] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:07,456] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:07,457] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:07,647] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:07,647] [DEBUG] [2024-07-10 17:41:07.647643] 停止读取数据
+[2024-07-10 17:41:07,647] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com4.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com4.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:08,853] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:08,853] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:08,938] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:08,938] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:08,940] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:09,355] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:09,355] [DEBUG] [2024-07-10 17:41:09.355959] 停止读取数据
+[2024-07-10 17:41:09,355] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com5.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com5.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:09,836] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:09,836] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:09,912] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:09,912] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:09,913] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:10,130] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:10,130] [DEBUG] [2024-07-10 17:41:10.130100] 停止读取数据
+[2024-07-10 17:41:10,130] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com5.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com5.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据
+[2024-07-10 17:41:10,586] [DEBUG] 发送:4344a500000000
+[2024-07-10 17:41:10,586] [DEBUG] 等待读取数据...
+[2024-07-10 17:41:10,669] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-10 17:41:10,669] [DEBUG] 串口已连接，通信正常
+[2024-07-10 17:41:10,671] [DEBUG] 等待读取huk或判断指令...
+[2024-07-10 17:41:11,102] [DEBUG] 收到huk或判断指令:None
+[2024-07-10 17:41:11,102] [DEBUG] [2024-07-10 17:41:11.102782] 停止读取数据
+[2024-07-10 17:41:11,103] [ERROR] 错误：停止读取数据
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com6.py", line 119, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive_com6.py", line 223, in Data_dispose
+    raise Exception("停止读取数据") #抛出没有数据的错误
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: 停止读取数据

@@ -1,0 +1,2809 @@
+;RF Calibration ,GoldMachine, and Non-signalling Test aConfig File
+
+[CAT1_COMM_INFO]
+;crysital 0-dcxo,1-tcxo
+xo_type = 0
+
+chip_id = 0
+
+; t0 check
+afc_t0_limit = -40,100
+
+agc_cell_power = -40
+
+;agc校准时Rssi的判断误差
+agc_rssi_limit = 10
+ 
+nst_bler_statistic_count_fdd = 2
+nst_bler_statistic_count_tdd = 2
+
+apc_seq_interval = 1
+apc_onOff_Mode = 1
+;apc_offOn_radio = [1-7]
+apc_offOn_radio = 1
+
+[WIFI]
+rx_freq_list_count = 10
+agc_freqlist = 2400,2410,2420,2430,2440,2450,2462,2475,2487,2500
+agc_gainerr_raw_limit = -3,3
+;unit ms
+nst_sen_length = 1000
+nst_sen_cell_power = -80
+nst_sen_limit = 0.92
+nst_sen_rssi_limit = 3
+
+[CAT1_BAND1]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 2140
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 1950
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 2110,2119,2125,2130,2135,2140,2146,2153,2160,2170
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 1920,1929,1935,1940,1945,1950,1956,1963,1970,1980
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 1950
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -94
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND2]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 1960
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 1880
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 1930,1936,1943,1950,1956,1960,1970,1976,1983,1990
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 1850,1856,1863,1870,1876,1883,1890,1896,1903,1910
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 1880
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -92
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND3]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 1842.5
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 1747.5
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 1805,1814,1822,1829,1836,1842.5,1851,1860,1869,1880
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 1710,1719,1727,1734,1741,1747.5,1756,1765,1774,1785
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+apc_max_delta_pwr = 9
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 1747
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -91
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND4]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 2132.5
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 1735.5
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 2110,2114.5,2119,2123.5,2128,2132.5,2138,2144,2150,2155
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 1710,1714.5,1719,1723.5,1728,1732.5,1738,1744.5,1750,1755
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+apc_max_delta_pwr = 9
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 1747
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -94
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND5]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 881.5
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 836.5
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 869,872,875,877.5,879.5,881.5,884,887,890,894
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 824,827,830,832.5,834.5,836.5,839,842,845,849
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 3
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 836
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -92.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND7]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 2655
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 2535
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 2620,2627,2634,2641,2648,2655,2664,2673,2682,2690
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 2500,2507,2514,2521,2528,2535,2544,2553,2562,2570
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 3
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 2535
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -92
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND8]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 942.5
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 897.5
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 925,930,934,937,940,942.5,945.5,949,954,960
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 880,885,889,892,895,897.5,900.5,904,909,915
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 897
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -91.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND12]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 737
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 707
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 729,731,733,734.5,736,737.5,739,741,743,746
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 699,701,703,704.5,706,707.5,709,711,713,716
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 707
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -91
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND13]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 751
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 782
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 746,747,748,749,750,751,752,754,755,756
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 777,778,779,780,781,782,783,785,786,787
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 782
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -91
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND14]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 763
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 793
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 758,759,760,761,762,763,764,765,766,768
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 788,789,790,791,792,793,794,795,796,798
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 793
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -91
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND17]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 740
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 710
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 734,735,737,738,739,740,741,743,744,746
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 704,705,707,708,709,710,711,713,715,716
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 710
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -91
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND18]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 867
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 822
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 860,861.5,863,864.5,866,867.5,869,871,873,875
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 815,816.5,818,819.5,821,822.5,824,826,828,830
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 822
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -94.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND19]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 882
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 837
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 875,876.5,878,879.5,881,882.5,884,886,888.5,890
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 830,831.5,833,834.5,836,837.5,839,841,843.5,845
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 837
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -94.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND20]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 806
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 847
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 791,794,797,801,804,806,811,814,817,821
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 832,835,838,842,845,847,852,855,858,862
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 847
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -91.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND25]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 1962
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 1882
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 1930,1936.5,1943,1949.5,1956,1962.5,1970.5,1978.5,1986.5,1995
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 1850,1856.5,1863,1869.5,1876,1882.5,1890.5,1898.5,1906.5,1915
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 1882
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -92
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND26]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 876
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 831
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 859,862.5,866,869.5,873,876.5,881,885.5,890,894
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 814,817.5,821,824.5,828,831.5,836,840.5,845,849
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 831
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -92
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND28]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 780
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 725
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 758,763,768,773,778,780.5,788,793,798,803
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 703,708,713,718,723,725.5,733,738,743,748
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 725
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -93
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND66]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 2155
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 1745
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 2110,2119,2128,2137,2146,2155,2166,2177,2188,2200
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 1710,1717,1724,1731,1738,1745,1753,1762,1771,1780
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 1745
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -93.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND71]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 634
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 680
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 617,620,624,627,631,634,638,643,647,652
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 663,666,670,673,677,680,684,689,693,698
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 680
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -91.2
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND85]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 737
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 707
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 728,729,731,733,735,737,739,741,743,746
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 698,699,701,703,705,707,709,711,713,716
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 707
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -91
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -28,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -28,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -28
+
+[CAT1_BAND34]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 2017.5
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 2017.5
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 2010,2011.5,2013,2014.5,2016,2017.5,2018,2020,2022,2024,2025
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 2010,2011.5,2013,2014.5,2016,2017.5,2018,2020,2022,2024,2025
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 2017
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -94.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND38]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 2595
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 2595
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 2570,2575,2580,2585,2590,2595,2601,2608,2614,2620
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 2570,2575,2580,2585,2590,2595,2601,2608,2614,2620
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 2595
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -94.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND39]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 1900
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 1900
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 1880,1884,1888,1892,1896,1900,1905,1910,1915,1920
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 1880,1884,1888,1892,1896,1900,1905,1910,1915,1920
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 1900
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -94.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND40]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 2350
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 2350
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 2300,2310,2320,2330,2340,2350,2362,2375,2387,2400
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 2300,2310,2320,2330,2340,2350,2362,2375,2387,2400
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 2350
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -94.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25
+
+[CAT1_BAND41]
+;Tx MaxPower Set (精度0.25dB)
+tx_max_power = 23
+
+;afc校准频点
+afc_freq  = 2593
+
+;afc校准时仪表小区功率
+afc_cell_power = -40
+
+;agc校准时UE发射的触发信号频点
+agc_trigger_freq = 2593
+
+;agc校准时UE发射的触发信号
+agc_trigger_pa_idx = 0
+agc_trigger_da_idx = 20 
+
+;rx校准的频补点数
+rx_freq_list_count = 10
+
+;rx各频补频点(区分高BandWidth与低BandWidth)
+agc_freqlist = 2496,2514,2546,2564,2573,2593,2611,2642,2666,2690
+
+agc_gainerr_raw_limit = -3,3
+
+;tx校准的频补点数
+tx_freq_list_count = 10
+
+;tx各频补频点
+apc_freqlist = 2496,2515,2535,2554,2575,2593,2617,2642,2666,2690
+
+;Pwr adjust,为正校准功率提高,为负,校准功率降低(每个校准频点的manual调整值)
+tx_freq_rel_adjust_list = 0,0,0,0,0,0,0,0,0,0
+
+;apc校准中心频点在apc_freqlist的位置
+tx_middle_frequency_offset = 5
+
+;apc 测试时仪表期望功率的相对调整值(最多8个档位调整值,与PA Bias配置数相关)
+apc_exppwr_rel_adjust_list = 15,15,15,15,15,5,5,5
+
+;txApc校准最大功率门限相对调整值(相对offlineTable中的Ant Output Power Range Max),for 10 freqs
+apc_max_pwr_limit_ref_adjust = 0,0,0,0,0,0,0,0,0,0
+
+;txApc校准最小功率门限相对调整值(相对offlineTable中的Ant Output Power Range Min)
+apc_min_pwr_limit_ref_adjust = 0
+
+apc_max_delta_pwr = 9
+
+;pa切换点的最大迟滞区，unit:dB
+apc_max_pa_sw_overlap_pwr = 2,2,2,2,2,2,2,2
+
+;da switch point
+da_switch_point = 62,83
+
+apc_freqComp_da_startIdx_Offset = 20,5,5,0,0,0,0,0
+apc_freqComp_da_length = 3,3,3,3,3,3,3,3
+
+;txbw_cal
+txbw_freq = 2593
+txbw_da_index = 40,70
+txbw_exppwr = 26,-5
+
+tmprtCmpst_highTmprt = 70
+tmprtCmpst_lowTmprt = -20
+;tmprtCmpst adjust by frequency,only for level1, 10 values mapping to 10 freqcomp
+;range=[-8,7],unit: 0.25dB, positive means raise, negative means drop
+;high for temprt larger than tmprtCmpst_highTmprt
+tmprtCmpst_adjust_high = 0,0,0,0,0,0,0,0,0,0
+;low fo temprt lower than tmprtCmpst_lowTmprt
+tmprtCmpst_adjust_low = 0,0,0,0,0,0,0,0,0,0
+
+;bler Test
+nst_bler_ics_level = -80
+nst_bler_ics_txPower = 0
+; unit: s
+nst_bler_ics_interval = 0
+nst_bler_cell_level = -92.5
+nst_bler_txPower = 23
+nst_bler_txRbNum = 50
+nst_bler_txRbStartIdx = 0
+nst_bler_limit = 0.05
+;rsrp limt
+nst_bler_rsrp_limit = 3
+
+;最大功率测试 ue设置的最大发射功率
+nst_max_power = 23
+;最大功率测试 仪表期望功率配置
+nst_max_power_instrExp = 25
+;最大功率测试 功率判断门限
+nst_max_power_limit = 21,25
+
+;最小功率测试 ue设置的最小发射功率
+nst_min_power = -43
+;最小功率测试 仪表期望功率配置
+nst_min_power_instrExp = -36
+;最小功率测试 功率判断门限
+nst_min_power_limit = -41
+
+;evm判断门限
+nst_evm_limit = 17.5
+;aclr判断门限 UTRA2,UTRA1,E-UTRA
+nst_aclr_limit = 35.2,32.2,29.5,0,29.5,32.2,35.2
+;freqErr判断门限(ppm)
+nst_freqErr_limit = 0.1
+;iqoffset判断门限
+nst_iqOffset_limit = -25,-20,-10
+;carrierLeakage判断门限
+nst_carrierleakage_limit = -25,-20,-10
+;IQ Image判断门限
+nst_iqImage_limit = -25

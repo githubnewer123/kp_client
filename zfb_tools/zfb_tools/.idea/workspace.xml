@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="88152294-6379-416d-b5cb-8e7a854ef361" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/manager/app_update.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/view/product_main_view.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2dfVWp2uAJhvRCFYzL6RRIGbNhb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.88.executor": "Run",
+    "Python.Main_UI.executor": "Run",
+    "Python.PostProductData (1).executor": "Run",
+    "Python.PostProductData.executor": "Run",
+    "Python.app_update.executor": "Run",
+    "Python.auto_update_view.executor": "Run",
+    "Python.com_port_manager.executor": "Run",
+    "Python.factory_mes.executor": "Run",
+    "Python.lock.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.mes.executor": "Run",
+    "Python.mes_login_view.executor": "Run",
+    "Python.order_view.executor": "Run",
+    "Python.product_main_view.executor": "Run",
+    "Python.tba_main_view.executor": "Run",
+    "Python.tqc_main.executor": "Run",
+    "Python.tqc_main_view.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/NEW/zfb_tools/zfb_tools",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\NEW\zfb_tools\zfb_tools\UI" />
+      <recent name="D:\NEW\zfb_tools\zfb_tools\burn_tool" />
+      <recent name="D:\NEW\zfb_tools\zfb_tools\test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\NEW\zfb_tools\zfb_tools\MMPT\main" />
+      <recent name="D:\NEW\zfb_tools\zfb_tools\burn_tool" />
+      <recent name="D:\NEW\zfb_tools\zfb_tools\burn_tool\kp_zfb" />
+      <recent name="D:\NEW\zfb_tools\zfb_tools\burn_tool\kp_send_recive" />
+      <recent name="D:\NEW\zfb_tools\zfb_tools" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Main_UI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="zfb_tools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/burn_tool" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/burn_tool/Main_UI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="factory_mes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="zfb_tools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mes/factory_mes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lock" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="zfb_tools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/lock.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="zfb_tools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="zfb_tools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mes/mes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.Main_UI" />
+        <item itemvalue="Python.mes" />
+        <item itemvalue="Python.lock" />
+        <item itemvalue="Python.factory_mes" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-7a29c1521ef0-c986f194a52a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.11799.298" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88152294-6379-416d-b5cb-8e7a854ef361" name="Changes" comment="" />
+      <created>1710399153599</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710399153599</updated>
+      <workItem from="1710399154675" duration="2922000" />
+      <workItem from="1710464324524" duration="25588000" />
+      <workItem from="1710495536458" duration="2394000" />
+      <workItem from="1710497981189" duration="625000" />
+      <workItem from="1710723650837" duration="16388000" />
+      <workItem from="1710816570915" duration="13634000" />
+      <workItem from="1710895672213" duration="25556000" />
+      <workItem from="1710982223349" duration="2496000" />
+      <workItem from="1711422597667" duration="6320000" />
+      <workItem from="1711500826137" duration="16482000" />
+      <workItem from="1711588183493" duration="12325000" />
+      <workItem from="1711618455829" duration="1952000" />
+      <workItem from="1712025634673" duration="1948000" />
+      <workItem from="1712027768708" duration="78000" />
+      <workItem from="1712720581643" duration="3712000" />
+      <workItem from="1713489288191" duration="2283000" />
+      <workItem from="1715223957499" duration="1392000" />
+      <workItem from="1715226489293" duration="16365000" />
+      <workItem from="1715302215426" duration="27913000" />
+      <workItem from="1715388324744" duration="29616000" />
+      <workItem from="1715561437297" duration="29604000" />
+      <workItem from="1715647934532" duration="29383000" />
+      <workItem from="1715733810259" duration="30248000" />
+      <workItem from="1715820482748" duration="16585000" />
+      <workItem from="1715907352649" duration="21317000" />
+      <workItem from="1716166479275" duration="27006000" />
+      <workItem from="1716252716985" duration="22090000" />
+      <workItem from="1716286473339" duration="1006000" />
+      <workItem from="1716338821044" duration="11496000" />
+      <workItem from="1716425227038" duration="5700000" />
+      <workItem from="1716511910958" duration="1250000" />
+      <workItem from="1716528109298" duration="16408000" />
+      <workItem from="1716771252258" duration="25671000" />
+      <workItem from="1716857246614" duration="16879000" />
+      <workItem from="1716879829152" duration="11823000" />
+      <workItem from="1716944033857" duration="21385000" />
+      <workItem from="1716970596196" duration="7374000" />
+      <workItem from="1717030608543" duration="52000" />
+      <workItem from="1717030678498" duration="71000" />
+      <workItem from="1717030868222" duration="4639000" />
+      <workItem from="1717117951972" duration="1300000" />
+      <workItem from="1717480291293" duration="9824000" />
+      <workItem from="1717548478710" duration="27854000" />
+      <workItem from="1717634926119" duration="23477000" />
+      <workItem from="1717721321241" duration="9535000" />
+      <workItem from="1717730913178" duration="78000" />
+      <workItem from="1717731229274" duration="163000" />
+      <workItem from="1717731481852" duration="1162000" />
+      <workItem from="1717732677573" duration="13072000" />
+      <workItem from="1718068791307" duration="1298000" />
+      <workItem from="1718153165604" duration="24762000" />
+      <workItem from="1718239738273" duration="2659000" />
+      <workItem from="1718242428911" duration="11009000" />
+      <workItem from="1718325935855" duration="11747000" />
+      <workItem from="1718585171941" duration="4548000" />
+      <workItem from="1718606467030" duration="326000" />
+      <workItem from="1719371166361" duration="22814000" />
+      <workItem from="1719398406432" duration="27000" />
+      <workItem from="1719449162236" duration="12356000" />
+      <workItem from="1719466029256" duration="39000" />
+      <workItem from="1719466175612" duration="79000" />
+      <workItem from="1719467193749" duration="15719000" />
+      <workItem from="1719535932934" duration="5615000" />
+      <workItem from="1719541570491" duration="15712000" />
+      <workItem from="1719795020589" duration="14746000" />
+      <workItem from="1719881159355" duration="8306000" />
+      <workItem from="1720425390351" duration="3172000" />
+      <workItem from="1720486006509" duration="15148000" />
+      <workItem from="1720507521113" duration="13124000" />
+      <workItem from="1720572452113" duration="26969000" />
+      <workItem from="1720659029693" duration="18048000" />
+      <workItem from="1720745522484" duration="25699000" />
+      <workItem from="1721004086828" duration="2951000" />
+      <workItem from="1721008140415" duration="6308000" />
+      <workItem from="1721180619761" duration="8291000" />
+      <workItem from="1721294840672" duration="1567000" />
+      <workItem from="1721351034454" duration="2405000" />
+      <workItem from="1721359748294" duration="4012000" />
+      <workItem from="1721697601550" duration="1307000" />
+      <workItem from="1721706386723" duration="1893000" />
+      <workItem from="1721798702866" duration="610000" />
+      <workItem from="1721812034280" duration="4980000" />
+      <workItem from="1721868367805" duration="14817000" />
+      <workItem from="1721889076722" duration="5863000" />
+      <workItem from="1721955522201" duration="19943000" />
+      <workItem from="1722213787779" duration="19417000" />
+      <workItem from="1722300414783" duration="8529000" />
+      <workItem from="1722387777987" duration="1307000" />
+      <workItem from="1722416487424" duration="4176000" />
+      <workItem from="1722583576919" duration="1299000" />
+      <workItem from="1722836616126" duration="5434000" />
+      <workItem from="1722842955188" duration="5244000" />
+      <workItem from="1722906578490" duration="10892000" />
+      <workItem from="1723164499229" duration="3143000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/zfb_tools$mes.coverage" NAME="mes 覆盖结果" MODIFIED="1720594590975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mes" />
+    <SUITE FILE_PATH="coverage/zfb_tools$lock.coverage" NAME="lock 覆盖结果" MODIFIED="1720494686967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/zfb_tools$product_main_view.coverage" NAME="product_main_view Coverage Results" MODIFIED="1710896893761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
+    <SUITE FILE_PATH="coverage/zfb_tools$app_update.coverage" NAME="app_update 覆盖结果" MODIFIED="1719544223003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manager" />
+    <SUITE FILE_PATH="coverage/zfb_tools$Main_UI.coverage" NAME="Main_UI 覆盖结果" MODIFIED="1723166396697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/burn_tool" />
+    <SUITE FILE_PATH="coverage/zfb_tools$mes_login_view.coverage" NAME="mes_login_view Coverage Results" MODIFIED="1710470369275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
+    <SUITE FILE_PATH="coverage/zfb_tools$PostProductData.coverage" NAME="PostProductData 覆盖结果" MODIFIED="1715398955800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/zfb_tools$factory_mes.coverage" NAME="factory_mes 覆盖结果" MODIFIED="1720426627980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mes" />
+    <SUITE FILE_PATH="coverage/zfb_tools$tba_main_view.coverage" NAME="tba_main_view 覆盖结果" MODIFIED="1715579752142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
+    <SUITE FILE_PATH="coverage/zfb_tools$88.coverage" NAME="88 覆盖结果" MODIFIED="1715656894400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/device" />
+    <SUITE FILE_PATH="coverage/zfb_tools$tqc_main.coverage" NAME="tqc_main 覆盖结果" MODIFIED="1719468452120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/zfb_tools$main.coverage" NAME="main 覆盖结果" MODIFIED="1723166408398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/zfb_tools$tqc_main_view.coverage" NAME="tqc_main_view 覆盖结果" MODIFIED="1716972830600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
+    <SUITE FILE_PATH="coverage/zfb_tools$order_view.coverage" NAME="order_view Coverage Results" MODIFIED="1710982836100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
+    <SUITE FILE_PATH="coverage/zfb_tools$PostProductData__1_.coverage" NAME="PostProductData (1) 覆盖结果" MODIFIED="1715409645746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/zfb_tools$com_port_manager.coverage" NAME="com_port_manager 覆盖结果" MODIFIED="1715653423430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/device" />
+    <SUITE FILE_PATH="coverage/zfb_tools$auto_update_view.coverage" NAME="auto_update_view Coverage Results" MODIFIED="1710495549641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
+  </component>
+</project>

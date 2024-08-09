@@ -1,0 +1,71 @@
+<?xml version = "1.0" encoding="GB2312"?>
+<Script>
+ <TestFolder Name="Root" LoopCount="10" Module="" TryCount="0" ID="{5031e8b4-d39c-4273-b634-5ae663e3bd86}" Loop="0" Sleep="10" BindingNode="" Enabled="1" Function="" ErrorHandling="0">
+  <TestFolder Name="Cat1_Cal&amp;Nst" LoopCount="100" Module="" TryCount="0" ID="{1be33061-e96a-442b-9677-4abf57fdb675}" Loop="0" Sleep="0" BindingNode="" Enabled="1" Function="" ErrorHandling="0">
+   <TestFolder Name="Init Resource" LoopCount="0" Module="" TryCount="0" ID="{01cbb4c1-67c5-4bc6-b8c9-b0042cab0da0}" Loop="0" Sleep="0" BindingNode="" Enabled="1" Function="" ErrorHandling="0">
+    <TestCase Name="Init Context" LoopCount="10" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{a0252a60-32f8-4787-8123-f56068fc0dff}" Loop="0" Sleep="0" BindingNode="" Enabled="1" Function="Init_Context" ErrorHandling="0">
+     <ParameterGroup>
+      <Parameter Name="Plateform" LowerLimit="-842150451" Data="3" Type="0" UpperLimit="-842150451" Description=""/>
+      <Parameter Name="BusinessLogSwitch" LowerLimit="0" Data="0" Type="0" UpperLimit="99120920" Description=""/>
+      <Parameter Name="DebugLogClose" Data="1" Type="1" Description=""/>
+      <Parameter Name="WifiCaliEnable" Data="0" Type="1" Description=""/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="Init PowerInstrument" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{87cbdbac-01d4-4966-bc9b-0654a87a6f23}" Loop="0" Sleep="0" BindingNode="" Enabled="0" Function="Init_Power" ErrorHandling="0"/>
+    <TestCase Name="Init TestInstrument" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{9e48def6-c3ea-4ad3-bb51-707489c0947f}" Loop="0" Sleep="0" BindingNode="" Enabled="1" Function="Init_Instrument" ErrorHandling="0"/>
+    <TestCase Name="Init LocalDB" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{4a54caff-c962-4ee9-b847-20d9f2aeed10}" Loop="0" Sleep="0" BindingNode="" Enabled="0" Function="Init_LocalDb" ErrorHandling="0">
+     <ParameterGroup>
+      <Parameter Name="StationName" Data="Station1" Type="3" Description=""/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="Input IME/SN" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{0a30300b-1cd3-44b8-bd0e-62b079ca6dcc}" Loop="0" Sleep="0" BindingNode="" Enabled="0" Function="InputImeiSn" ErrorHandling="0">
+     <ParameterGroup>
+      <Parameter Name="InputType" LowerLimit="-842150451" Data="2" Type="0" UpperLimit="-842150451" Description="0: ONLY_IMEI;&#xa;1: ONLY_SN;&#xa;2: IMEI_SN;&#xa;3: SN_IMEI"/>
+      <Parameter Name="Seperator" Data="/" Type="3" Description="when input imei and sn at the same time,use Seperator to distinguish them"/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="Init ATPort" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{3c5fa60f-b39f-44b4-a56d-3dc9c8bf3a88}" Loop="0" Sleep="0" BindingNode="" Enabled="1" Function="Init_AMTPort" ErrorHandling="0">
+     <ParameterGroup>
+      <Parameter Name="BaudRate" LowerLimit="-842150451" Data="115200" Type="0" UpperLimit="-842150451" Description=""/>
+      <Parameter Name="DefaultBaudRate" LowerLimit="0" Data="115200" Type="0" UpperLimit="91808760" Description=""/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="System Start" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{e7c714cd-55ba-437b-adb5-93131babcfbd}" Loop="0" Sleep="0" BindingNode="" Enabled="1" Function="JudgeSystemStart" ErrorHandling="0"/>
+    <TestCase Name="EnterProdMode" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{eb636d69-fa2e-49f0-bd9f-4a9914b64ef8}" Loop="0" Sleep="0" BindingNode="" Enabled="0" Function="EnterProdMode" ErrorHandling="0"/>
+    <TestCase Name="Write IMEI" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{33b6fd5a-25b4-481a-bfca-95999d5863e3}" Loop="0" Sleep="0" BindingNode="" Enabled="0" Function="WriteIMEI" ErrorHandling="0"/>
+    <TestCase Name="Write SN" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{cc6c4202-0762-4137-9b6b-79b1eaabb69c}" Loop="0" Sleep="0" BindingNode="" Enabled="0" Function="WriteSN" ErrorHandling="0"/>
+    <TestCase Name="Read SN" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{4a6773b0-1e07-464a-ba2f-7aa9cd477ada}" Loop="0" Sleep="0" BindingNode="" Enabled="0" Function="ReadSN" ErrorHandling="0"/>
+    <TestCase Name="Read IMEI" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{f48fb484-fc31-4a4e-a1a6-f33843703ad4}" Loop="0" Sleep="0" BindingNode="" Enabled="0" Function="ReadIMEI" ErrorHandling="0"/>
+   </TestFolder>
+   <TestFolder Name="CAT1" LoopCount="0" Module="" TryCount="0" ID="{58bf7d09-b9d8-4ee5-8b33-6a2c06ad34f1}" Loop="0" Sleep="0" BindingNode="" Enabled="1" Function="" ErrorHandling="0">
+    <TestCase Name="Enter NstTestMode" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{e500c80e-06ec-410f-9d11-af36383ae677}" Loop="0" Sleep="0" BindingNode="" Enabled="1" Function="Cat1_NST_Enter_Mode" ErrorHandling="0"/>
+    <TestCase Name="CabLossCalc" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{be32bc5d-0024-40ee-8532-887ccf93ffcf}" Loop="0" Sleep="100" BindingNode="" Enabled="1" Function="Cat1_CalCabLoss" ErrorHandling="0">
+     <ParameterGroup>
+      <Parameter Name="SigType" LowerLimit="-842150451" Data="3" Type="0" UpperLimit="-842150451" Description=""/>
+      <Parameter Name="RbNumber" LowerLimit="-842150451" Data="50" Type="0" UpperLimit="-842150451" Description=""/>
+      <Parameter Name="RbStartIdx" LowerLimit="-842150451" Data="0" Type="0" UpperLimit="-842150451" Description=""/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="Exit NstTestMode" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{aadd7f14-296b-4532-9917-56fe4ee35d15}" Loop="0" Sleep="0" BindingNode="Enter NstTestMode{e500c80e-06ec-410f-9d11-af36383ae677}" Enabled="1" Function="Cat1_NST_Exit_Mode" ErrorHandling="0"/>
+   </TestFolder>
+   <TestFolder Name="Free Source" LoopCount="0" Module="" TryCount="0" ID="{84315f37-fd87-4c6e-8b00-cf89cf3f57d3}" Loop="0" Sleep="0" BindingNode="" Enabled="1" Function="" ErrorHandling="0">
+    <TestCase Name="DisableProdMode" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{0eb33397-2388-4c69-9ad2-b9ee59b747a7}" Loop="0" Sleep="0" BindingNode="EnterProdMode{eb636d69-fa2e-49f0-bd9f-4a9914b64ef8}" Enabled="0" Function="DisableProdMode" ErrorHandling="0"/>
+    <TestCase Name="Free ATPort" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{82c3681c-da3d-4372-9ea5-5e8b2f286fda}" Loop="0" Sleep="0" BindingNode="Init ATPort{3c5fa60f-b39f-44b4-a56d-3dc9c8bf3a88}" Enabled="1" Function="Free_ATPort" ErrorHandling="0">
+     <ParameterGroup>
+      <Parameter Name="ResetEnable" Data="0" Type="1" Description=""/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="Free LocalDB" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{5f89d2cc-8d9b-4eda-b67a-3b5bab5f354d}" Loop="0" Sleep="0" BindingNode="Init LocalDB{4a54caff-c962-4ee9-b847-20d9f2aeed10}" Enabled="0" Function="Free_LocalDb" ErrorHandling="0"/>
+    <TestCase Name="Free TestInstrument" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{daff982b-e77c-4112-ad04-e5425e2c06c2}" Loop="0" Sleep="0" BindingNode="Init TestInstrument{9e48def6-c3ea-4ad3-bb51-707489c0947f}" Enabled="1" Function="Free_Instrument" ErrorHandling="0"/>
+    <TestCase Name="Free PowerInstrument" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{90ff439b-88e9-4801-947d-92ad0695ab59}" Loop="0" Sleep="0" BindingNode="Init PowerInstrument{87cbdbac-01d4-4966-bc9b-0654a87a6f23}" Enabled="0" Function="Free_Power" ErrorHandling="0"/>
+    <TestCase Name="Free Context" LoopCount="0" Module="TestServiceDlls/RFTestAdapter.dll" TryCount="0" ID="{2f902a99-377c-4e14-9b52-ac887592aa13}" Loop="0" Sleep="10" BindingNode="Init Context{a0252a60-32f8-4787-8123-f56068fc0dff}" Enabled="1" Function="Free_Context" ErrorHandling="0">
+     <ParameterGroup>
+      <Parameter Name="RenameBy" LowerLimit="0" Data="1" Type="0" UpperLimit="0" Description="0:No_Rename;&#xa;1:ReName_By_Sn;&#xa;2.ReName_By_Imei."/>
+      <Parameter Name="FileClassifiedStorage" Data="1" Type="1" Description="true:ReStorage log in ClassifiedStorageDir &#xa;false: don't ReStorage"/>
+      <Parameter Name="ClassifiedStorageDir" Data="C:\EigenComm_LogStorage" Type="3" Description=""/>
+     </ParameterGroup>
+    </TestCase>
+   </TestFolder>
+  </TestFolder>
+ </TestFolder>
+</Script>

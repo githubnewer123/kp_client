@@ -1,0 +1,380 @@
+<?xml version = "1.0" encoding="GB2312"?>
+<Script>
+ <TestFolder Name="Root" Enabled="1" ErrorHandling="0" Loop="0" Module="" BindingNode="" Function="" Sleep="10" ID="{5031e8b4-d39c-4273-b634-5ae663e3bd86}" LoopCount="1000" TryCount="0">
+  <TestFolder Name="Cat1_Cal&amp;Nst" Enabled="1" ErrorHandling="0" Loop="0" Module="" BindingNode="" Function="" Sleep="0" ID="{1be33061-e96a-442b-9677-4abf57fdb675}" LoopCount="100" TryCount="0">
+   <TestFolder Name="Init Resource" Enabled="1" ErrorHandling="0" Loop="0" Module="" BindingNode="" Function="" Sleep="0" ID="{01cbb4c1-67c5-4bc6-b8c9-b0042cab0da0}" LoopCount="0" TryCount="0">
+    <TestCase Name="Init Context" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Init_Context" Sleep="0" ID="{a0252a60-32f8-4787-8123-f56068fc0dff}" LoopCount="10" TryCount="0">
+     <ParameterGroup>
+      <Parameter Name="Plateform" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+      <Parameter Name="BusinessLogSwitch" Description="" Data="0" Type="0" LowerLimit="0" UpperLimit="99120920"/>
+      <Parameter Name="DebugLogClose" Description="" Data="1" Type="1"/>
+      <Parameter Name="WifiCaliEnable" Description="" Data="1" Type="1"/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="Init PowerInstrument" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Init_Power" Sleep="0" ID="{87cbdbac-01d4-4966-bc9b-0654a87a6f23}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Init TestInstrument" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Init_Instrument" Sleep="0" ID="{9e48def6-c3ea-4ad3-bb51-707489c0947f}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Init LocalDB" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Init_LocalDb" Sleep="0" ID="{4a54caff-c962-4ee9-b847-20d9f2aeed10}" LoopCount="0" TryCount="0">
+     <ParameterGroup>
+      <Parameter Name="StationName" Description="" Data="Station1" Type="3"/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="Input IME/SN" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="InputImeiSn" Sleep="0" ID="{0a30300b-1cd3-44b8-bd0e-62b079ca6dcc}" LoopCount="0" TryCount="0">
+     <ParameterGroup>
+      <Parameter Name="InputType" Description="0: ONLY_IMEI;&#xa;1: ONLY_SN;&#xa;2: IMEI_SN;&#xa;3: SN_IMEI" Data="2" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+      <Parameter Name="Seperator" Description="when input imei and sn at the same time,use Seperator to distinguish them" Data="/" Type="3"/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="Init ATPort" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Init_AMTPort" Sleep="0" ID="{3c5fa60f-b39f-44b4-a56d-3dc9c8bf3a88}" LoopCount="0" TryCount="0">
+     <ParameterGroup>
+      <Parameter Name="BaudRate" Description="" Data="115200" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+      <Parameter Name="DefaultBaudRate" Description="" Data="115200" Type="0" LowerLimit="0" UpperLimit="91805808"/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="System Start" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="JudgeSystemStart" Sleep="0" ID="{e7c714cd-55ba-437b-adb5-93131babcfbd}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="CheckGMFlag" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="QueryGMFlag" Sleep="0" ID="{ae5bcf11-bd7d-4b8f-b65e-e7ebef65d21b}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="EnterProdMode" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="EnterProdMode" Sleep="0" ID="{eb636d69-fa2e-49f0-bd9f-4a9914b64ef8}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Write IMEI" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="WriteIMEI" Sleep="0" ID="{33b6fd5a-25b4-481a-bfca-95999d5863e3}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Write SN" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="WriteSN" Sleep="0" ID="{cc6c4202-0762-4137-9b6b-79b1eaabb69c}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Read SN" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="ReadSN" Sleep="0" ID="{4a6773b0-1e07-464a-ba2f-7aa9cd477ada}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Read IMEI" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="ReadIMEI" Sleep="0" ID="{f48fb484-fc31-4a4e-a1a6-f33843703ad4}" LoopCount="0" TryCount="0"/>
+   </TestFolder>
+   <TestFolder Name="CAT1" Enabled="1" ErrorHandling="0" Loop="0" Module="" BindingNode="" Function="" Sleep="0" ID="{bf90ff90-edab-42dd-8e9d-f4ab0ecdde93}" LoopCount="0" TryCount="0">
+    <TestFolder Name="Cat1_Cal" Enabled="0" ErrorHandling="0" Loop="0" Module="" BindingNode="" Function="" Sleep="0" ID="{ec512cd9-461a-4296-a9e9-502203bc7ec6}" LoopCount="10" TryCount="0">
+     <TestCase Name="ClearCaliFlag" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="SetNpiFlag" Sleep="0" ID="{42b55886-5da5-4a47-a29e-2306caa81d20}" LoopCount="0" TryCount="0">
+      <ParameterGroup>
+       <Parameter Name="NpiFlag" Description="" Data="rfCaliDone,0" Type="3"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="SyncInformation" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_Sync_With_Ue" Sleep="0" ID="{3f83136c-8b29-443d-9cdf-7182495a7981}" LoopCount="0" TryCount="0"/>
+     <TestCase Name="SelfCalibration" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_Self_Cal" Sleep="0" ID="{d091fc3f-adea-4fd0-a703-5d6829f4b951}" LoopCount="0" TryCount="0"/>
+     <TestCase Name="EnterTestMode" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_Enter_CalMode" Sleep="0" ID="{54657d23-61b4-4ec8-b084-435727cbd052}" LoopCount="0" TryCount="0"/>
+     <TestCase Name="AFC" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_AFC_Cal" Sleep="0" ID="{3967e093-4a8a-44c2-ae6a-dfdfbd3bf69e}" LoopCount="0" TryCount="0">
+      <ParameterGroup>
+       <Parameter Name="Band" Description="" Data="5" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="AGC" Enabled="1" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_AGC_Cal" Sleep="0" ID="{e4cd1291-458e-41c1-9902-d47ea006e74b}" LoopCount="0" TryCount="1">
+      <ParameterGroup>
+       <Parameter Name="CMWGprfInitSleep" Description="" Data="0" Type="0" LowerLimit="3670072" UpperLimit="5505101"/>
+       <Parameter Name="CheckGainError" Description="" Data="1" Type="1"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="APC" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_APC_Cal" Sleep="0" ID="{46120e65-ed48-43e3-a9fd-a2d37bf270a8}" LoopCount="20" TryCount="10">
+      <ParameterGroup>
+       <Parameter Name="CMWGprfInitSleep" Description="" Data="0" Type="0" LowerLimit="3080307" UpperLimit="6619250"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="TxBwCal" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_TxBW_Cal" Sleep="0" ID="{a4123a9c-dca2-4908-a305-9f7ef3ee8607}" LoopCount="20" TryCount="10">
+      <ParameterGroup>
+       <Parameter Name="CMWGprfInitSleep" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+       <Parameter Name="Band" Description="" Data="39" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="WriteCalData" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_Write_CalTable" Sleep="0" ID="{d0fc5717-12a8-48cd-b43f-dcd407d69ea6}" LoopCount="0" TryCount="0"/>
+     <TestCase Name="BackupCalData" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_Read_CalTable" Sleep="0" ID="{49bbbbca-501c-4647-ba6e-04da459f0229}" LoopCount="0" TryCount="0"/>
+     <TestCase Name="SetCaliFlag" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="SetNpiFlag" Sleep="0" ID="{dbc6595b-99d9-4d28-b0ac-de3ccdc6bc6c}" LoopCount="0" TryCount="0">
+      <ParameterGroup>
+       <Parameter Name="NpiFlag" Description="" Data="rfCaliDone,1" Type="3"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="ExitTestMode" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="EnterTestMode{54657d23-61b4-4ec8-b084-435727cbd052}" Function="Cat1_Exit_CalMode" Sleep="0" ID="{b4210c26-d281-4b0f-9cc5-be07a04a9fbb}" LoopCount="0" TryCount="0"/>
+    </TestFolder>
+    <TestFolder Name="Cat1_NST" Enabled="1" ErrorHandling="0" Loop="0" Module="" BindingNode="" Function="" Sleep="0" ID="{5ffcd5bd-d195-4e0b-90bc-32bb423efef3}" LoopCount="0" TryCount="0">
+     <TestCase Name="CheckCaliFlag" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="QueryNpiFlag" Sleep="0" ID="{a107f697-3607-4643-8c06-8bddcbb549c9}" LoopCount="0" TryCount="0">
+      <ParameterGroup>
+       <Parameter Name="NpiFlag" Description="" Data="rfCaliDone,1" Type="3"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="ClearNstFlag" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="SetNpiFlag" Sleep="0" ID="{832ffed3-fac7-4aae-a6bf-dbf7342d624b}" LoopCount="0" TryCount="0">
+      <ParameterGroup>
+       <Parameter Name="NpiFlag" Description="" Data="rfNSTDone,0" Type="3"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="Enter NstTestMode" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_Enter_Mode" Sleep="0" ID="{066ab73f-be5c-4f32-965f-40b41e24a39f}" LoopCount="0" TryCount="0"/>
+     <TestFolder Name="TRX" Enabled="1" ErrorHandling="0" Loop="0" Module="" BindingNode="" Function="" Sleep="0" ID="{41db679d-362d-4278-ac77-076e1c3afdb6}" LoopCount="0" TryCount="0">
+      <TestCase Name="Band1" Enabled="1" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{fa308342-dfa1-47af-8c36-09fb666fb2cb}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="1" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="DlChannel" Description="" Data="300" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band3" Enabled="1" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{cefe98be-4e6f-4ff2-b934-e094c716881b}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="DlChannel" Description="" Data="1575" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="3670072" UpperLimit="5505101"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band5" Enabled="1" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{d0d1c06d-b878-4492-9319-57b7f32b6332}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="5" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="DlChannel" Description="" Data="2525" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band8" Enabled="1" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{3b3f639f-bcde-4698-83b1-a82215857f3b}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="8" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="DlChannel" Description="" Data="3625" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band34" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{77ca65cd-abe9-4674-800c-ebaf8f82c8f2}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="34" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="DlChannel" Description="" Data="36275" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band38" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{b8ffca21-4862-4671-a82c-b8fb1e7ecf78}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="38" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="DlChannel" Description="" Data="38000" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band39" Enabled="1" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{82c8270d-71e1-4518-ae40-7a1a4f6b6a2c}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="39" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="DlChannel" Description="" Data="38450" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band40" Enabled="1" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{53f6f32a-828b-44a7-8345-d02fc489e08b}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="40" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="DlChannel" Description="" Data="39150" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band41" Enabled="1" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{1bb87cdc-1d0d-4a0e-9ee8-8ee6275e07eb}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="41" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="DlChannel" Description="" Data="40620" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band2" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{4b291049-8adc-4ed4-9c92-f2b51d676c5e}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="2" Type="0" LowerLimit="0" UpperLimit="239338040"/>
+        <Parameter Name="DlChannel" Description="" Data="900" Type="0" LowerLimit="0" UpperLimit="239339352"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band4" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{2e3d854e-fd8b-4c5f-916b-eb1b51007218}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="4" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="DlChannel" Description="" Data="2175" Type="0" LowerLimit="0" UpperLimit="239340008"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band7" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{d176a7c4-3477-41bc-a91a-15a9d7b7cd2d}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="7" Type="0" LowerLimit="0" UpperLimit="0"/>
+        <Parameter Name="DlChannel" Description="" Data="3100" Type="0" LowerLimit="0" UpperLimit="0"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band12" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{d7cb9a7e-20ba-40e2-bba2-7beeb5efb066}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="12" Type="0" LowerLimit="0" UpperLimit="0"/>
+        <Parameter Name="DlChannel" Description="" Data="5095" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band13" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{a5d966f7-5610-4192-a051-1a3a2e8d5e21}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="13" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="DlChannel" Description="" Data="5230" Type="0" LowerLimit="0" UpperLimit="239342632"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band14" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{0c5210b1-499d-481c-884f-fdec85db7be7}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="14" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="DlChannel" Description="" Data="5330" Type="0" LowerLimit="0" UpperLimit="239338040"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band17" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{c4053e67-59a1-4913-bbae-120a76a66bfb}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="17" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="DlChannel" Description="" Data="5790" Type="0" LowerLimit="0" UpperLimit="236974024"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band18" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{d19427a7-edca-4486-a659-7fffbd4f7446}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="18" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="DlChannel" Description="" Data="5925" Type="0" LowerLimit="0" UpperLimit="0"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band19" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{ed72530e-1050-4315-86a2-df2f90fdd277}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="19" Type="0" LowerLimit="0" UpperLimit="0"/>
+        <Parameter Name="DlChannel" Description="" Data="6075" Type="0" LowerLimit="0" UpperLimit="239338040"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band20" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{9e1d25e3-180b-4e4e-9054-4a2d59c2e955}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="20" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="DlChannel" Description="" Data="6300" Type="0" LowerLimit="0" UpperLimit="105020040"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band25" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{5ba236e3-e3e6-48ce-86a5-ffbd216e67bb}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="25" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="DlChannel" Description="" Data="8365" Type="0" LowerLimit="0" UpperLimit="239342632"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band26" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{b98102fb-13fc-4d38-ae6c-e2c9ead8daf5}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="26" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="DlChannel" Description="" Data="8865" Type="0" LowerLimit="0" UpperLimit="235218360"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band28" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{9c5fcd62-c645-4db6-9932-d64cf6b7c07d}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="28" Type="0" LowerLimit="0" UpperLimit="102579224"/>
+        <Parameter Name="DlChannel" Description="" Data="9435" Type="0" LowerLimit="0" UpperLimit="105019720"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band66" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{0c091af8-9f22-4549-9d23-0810048f8ac5}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="66" Type="0" LowerLimit="6029413" UpperLimit="7143529"/>
+        <Parameter Name="DlChannel" Description="" Data="66786" Type="0" LowerLimit="0" UpperLimit="236971728"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band71" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{4c20e1d1-7fc8-4cf7-912c-65283ba9d190}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="71" Type="0" LowerLimit="0" UpperLimit="236971728"/>
+        <Parameter Name="DlChannel" Description="" Data="68761" Type="0" LowerLimit="0" UpperLimit="235949408"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+      <TestCase Name="Band85" Enabled="0" ErrorHandling="2" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_TRX_Test" Sleep="0" ID="{71cb1d38-e78b-4ed9-9cc7-3d5525b6e18d}" LoopCount="0" TryCount="1">
+       <ParameterGroup>
+        <Parameter Name="Band" Description="" Data="85" Type="0" LowerLimit="0" UpperLimit="0"/>
+        <Parameter Name="DlChannel" Description="" Data="70456" Type="0" LowerLimit="0" UpperLimit="236971728"/>
+        <Parameter Name="SigType" Description="" Data="3" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbNumber" Description="" Data="50" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="RbStartIdx" Description="" Data="0" Type="0" LowerLimit="-842150451" UpperLimit="-842150451"/>
+        <Parameter Name="MeasureFlag" Description="POWER_CHECK,&#xa;EVM_CHECK,&#xa;ACLR_CHECK,&#xa;FREQERROR_CHECK,&#xa;OBW_CHECK,&#xa;SEM_CHECK,&#xa;IQOFFSET_CHECK,&#xa;CARRIERLEAKAGE_CHECK,&#xa;IQIMAGE_CHECK,&#xa;INBANDEMIS_CHECK,&#xa;ECFLATNESS_CHECK," Data="1/1/1/1/1/1/0/0/0/0/0" Type="3"/>
+       </ParameterGroup>
+      </TestCase>
+     </TestFolder>
+     <TestCase Name="WIFI Sensitivity" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_WIFI_Sensitivity_Test" Sleep="0" ID="{768b0a4c-2790-4d17-9fa2-8f87e1a906d8}" LoopCount="0" TryCount="0">
+      <ParameterGroup>
+       <Parameter Name="DlFreq" Description="unit: MHz" Data="2450" Type="2" LowerLimit="0" UpperLimit="0"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="SetNstFlag" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="SetNpiFlag" Sleep="0" ID="{8d0f14c4-d74e-41fb-b885-0f24573cad66}" LoopCount="0" TryCount="0">
+      <ParameterGroup>
+       <Parameter Name="NpiFlag" Description="" Data="rfNSTDone,1" Type="3"/>
+      </ParameterGroup>
+     </TestCase>
+     <TestCase Name="Exit NstTestMode" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="" Function="Cat1_NST_Exit_Mode" Sleep="0" ID="{e25a5c11-6fb4-43a2-bc6d-a62eb86cccdb}" LoopCount="0" TryCount="0"/>
+    </TestFolder>
+   </TestFolder>
+   <TestFolder Name="Free Source" Enabled="1" ErrorHandling="0" Loop="0" Module="" BindingNode="" Function="" Sleep="0" ID="{84315f37-fd87-4c6e-8b00-cf89cf3f57d3}" LoopCount="0" TryCount="0">
+    <TestCase Name="DisableProdMode" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="EnterProdMode{eb636d69-fa2e-49f0-bd9f-4a9914b64ef8}" Function="DisableProdMode" Sleep="0" ID="{0eb33397-2388-4c69-9ad2-b9ee59b747a7}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Free ATPort" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="Init ATPort{3c5fa60f-b39f-44b4-a56d-3dc9c8bf3a88}" Function="Free_ATPort" Sleep="10" ID="{82c3681c-da3d-4372-9ea5-5e8b2f286fda}" LoopCount="10" TryCount="0">
+     <ParameterGroup>
+      <Parameter Name="ResetEnable" Description="" Data="0" Type="1"/>
+     </ParameterGroup>
+    </TestCase>
+    <TestCase Name="Free LocalDB" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="Init LocalDB{4a54caff-c962-4ee9-b847-20d9f2aeed10}" Function="Free_LocalDb" Sleep="0" ID="{5f89d2cc-8d9b-4eda-b67a-3b5bab5f354d}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Free TestInstrument" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="Init TestInstrument{9e48def6-c3ea-4ad3-bb51-707489c0947f}" Function="Free_Instrument" Sleep="0" ID="{daff982b-e77c-4112-ad04-e5425e2c06c2}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Free PowerInstrument" Enabled="0" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="Init PowerInstrument{87cbdbac-01d4-4966-bc9b-0654a87a6f23}" Function="Free_Power" Sleep="0" ID="{90ff439b-88e9-4801-947d-92ad0695ab59}" LoopCount="0" TryCount="0"/>
+    <TestCase Name="Free Context" Enabled="1" ErrorHandling="0" Loop="0" Module="TestServiceDlls/RFTestAdapter.dll" BindingNode="Init Context{a0252a60-32f8-4787-8123-f56068fc0dff}" Function="Free_Context" Sleep="10" ID="{2f902a99-377c-4e14-9b52-ac887592aa13}" LoopCount="0" TryCount="0">
+     <ParameterGroup>
+      <Parameter Name="RenameBy" Description="0:No_Rename;&#xa;1:ReName_By_Sn;&#xa;2.ReName_By_Imei." Data="1" Type="0" LowerLimit="0" UpperLimit="0"/>
+      <Parameter Name="FileClassifiedStorage" Description="true:ReStorage log in ClassifiedStorageDir &#xa;false: don't ReStorage" Data="1" Type="1"/>
+      <Parameter Name="ClassifiedStorageDir" Description="" Data="C:\EigenComm_LogStorage" Type="3"/>
+      <Parameter Name="RemoveLogFile" Description="" Data="0" Type="1"/>
+     </ParameterGroup>
+    </TestCase>
+   </TestFolder>
+  </TestFolder>
+ </TestFolder>
+</Script>

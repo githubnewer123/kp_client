@@ -1,0 +1,26 @@
+[2024-07-12 10:07:09,772] [DEBUG] 发送:4344a500000000
+[2024-07-12 10:07:09,772] [DEBUG] 等待读取数据...
+[2024-07-12 10:07:09,844] [DEBUG] 收到:5253a500000e56312e315f323032343032303200
+[2024-07-12 10:07:09,844] [DEBUG] 串口已连接，通信正常
+[2024-07-12 10:07:09,845] [DEBUG] 等待读取huk或判断指令...
+[2024-07-12 10:07:12,031] [DEBUG] 收到huk或判断指令:5253b0000010310711080d535341364b2e3030479f21
+[2024-07-12 10:07:12,032] [ERROR] 错误：Could not find module 'D:\NEW\zfb_tools_旧\zfb_tools\libkp_client.so' (or one of its dependencies). Try using the full path with constructor syntax.
+Traceback (most recent call last):
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 117, in Start_send
+    self.Data_dispose()  # 进入Kr烧入循环
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 153, in Data_dispose
+    self.kr_burn_in()
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 236, in kr_burn_in
+    kr = self.main_pull(self.pull_model, '1', self.chip_type, self.data_huk[12:], self.license_name)  # 拉取kr
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 402, in main_pull
+    ret = self.test_pull(pull_model.encode("utf-8"), license, int(pull_count), chip_type.encode("utf-8"), huks)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\NEW\zfb_tools_旧\zfb_tools\burn_tool\kp_send_recive\KP_send_receive.py", line 343, in test_pull
+    api = CDLL('./libkp_client.so')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'D:\NEW\zfb_tools_旧\zfb_tools\libkp_client.so' (or one of its dependencies). Try using the full path with constructor syntax.

@@ -1,0 +1,19 @@
+{
+    "link_time_out": "10",
+    "burn_time_out": "50",
+    "burn_success_time_out": "20",
+    "layout": "4*6",
+    "calibration": [
+        "",
+        "",
+        "",
+        ""
+    ],
+    "path": "bin\\fw.zip",
+    "station": "01",
+    "order_cache": "DD1712720018353",
+    "fail_num": 0,
+    "success_num": 0,
+    "admin": "",
+    "password": ""
+}
