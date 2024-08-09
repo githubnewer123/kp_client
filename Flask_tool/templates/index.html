@@ -1,0 +1,44 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高级界面</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>高级应用</h1>
+    </header>
+    <main>
+        <section>
+            <h2>欢迎</h2>
+            <p>这是一个更高级的Flask Web界面示例，只要用于存储常用网站信息</p>
+            <p>请扫描以下二维码以访问特定页面：</p>
+            <img src="{{ url_for('static', filename='scan_qr.png') }}" alt="Scan this QR code">
+            <form action="https://example.com/submit-your-endpoint" method="post">
+              <label for="myText">请输入您的手机号：</label>
+              <input type="text" id="myText" name="myText" placeholder="请输入文本">
+              <input type="reset" value="重置">
+              <input type="submit" value="提交">
+            </form>
+            <button type="button" onclick="window.location.href='https://yiyan.baidu.com/';">文心</button>
+            <button type="button" onclick="window.location.href='https://chatglm.cn/main/alltoolsdetail';">智谱</button>
+            <button type="button" onclick="window.location.href='https://tongyi.aliyun.com/qianwen/';">通义</button>
+        </section>
+        <section>
+            <h2>网站列表</h2>
+            <!-- 这里可以动态显示用户数据，例如从数据库加载 -->
+            <ul>
+                <li>二维码生成<a href="https://www.hlcode.cn/img" target="_blank">https://www.hlcode.cn/img</a></li>
+                <li>文心一言大模型<a href="https://yiyan.baidu.com/" target="_blank">https://yiyan.baidu.com/</a></li>
+                <li>二维码生成<a href="https://www.hlcode.cn/img" target="_blank">https://www.hlcode.cn/img</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>中云信安版权所有 &copy; 2024/8/8</p>
+    </footer>
+</body>
+</html>
